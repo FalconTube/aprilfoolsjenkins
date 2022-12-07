@@ -334,7 +334,7 @@ function fairyDustCursor() {
       this.position.y += this.velocity.y;
       this.lifeSpan--;
       
-      this.element.style.transform = "translate3d(" + this.position.x + "px," + this.position.y + "px, 0) scale(" + (this.lifeSpan / 120) + ")";
+      this.element.css("transform" , "translate3d(" + this.position.x + "px," + this.position.y + "px, 0) scale(" + (this.lifeSpan / 120) + ")");
     }
     
     this.die = function() {
