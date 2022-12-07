@@ -320,12 +320,12 @@ function fairyDustCursor() {
       this.position = {x: x - 10, y: y - 20};
       this.initialStyles.color = color;
 
-      this.element = Q(document).createElement('span');
+      this.element = Q('span');
       this.element.innerHTML = this.character;
       applyProperties(this.element, this.initialStyles);
       this.update();
       
-      Q(document).querySelector('.container').appendChild(this.element);
+      Q('.container').append(this.element);
     };
     
     this.update = function() {
@@ -337,7 +337,8 @@ function fairyDustCursor() {
     }
     
     this.die = function() {
-      this.element.parentNode.removeChild(this.element);
+      // this.element.parentNode.removeChild(this.element);
+      this.element.parentNode.remove(this.element);
     }
     
   }
