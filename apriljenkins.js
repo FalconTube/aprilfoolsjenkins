@@ -222,7 +222,7 @@ function addComment(name, comment) {
  * -- https://codepen.io/tholman/full/jWmZxZ/
  */
 
-(function fairyDustCursor() {
+function fairyDustCursor() {
   
   var possibleColors = ["#D61C59", "#E7D84B", "#1B8798"]
   var width = window.innerWidth;
@@ -237,9 +237,9 @@ function addComment(name, comment) {
   
   // Bind events that are needed
   function bindEvents() {
-    document.addEventListener('mousemove', onMouseMove);
-    document.addEventListener('touchmove', onTouchMove);
-    document.addEventListener('touchstart', onTouchMove);
+    Q(document).addEventListener('mousemove', onMouseMove);
+    Q(document).addEventListener('touchmove', onTouchMove);
+    Q(document).addEventListener('touchstart', onTouchMove);
     
     window.addEventListener('resize', onWindowResize);
   }
@@ -320,12 +320,12 @@ function addComment(name, comment) {
       this.position = {x: x - 10, y: y - 20};
       this.initialStyles.color = color;
 
-      this.element = document.createElement('span');
+      this.element = Q(document).createElement('span');
       this.element.innerHTML = this.character;
       applyProperties(this.element, this.initialStyles);
       this.update();
       
-      document.querySelector('.container').appendChild(this.element);
+      Q(document).querySelector('.container').appendChild(this.element);
     };
     
     this.update = function() {
@@ -354,5 +354,5 @@ function addComment(name, comment) {
   }
   
   init();
-})();
+};
 
