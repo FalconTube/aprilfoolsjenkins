@@ -237,11 +237,11 @@ function fairyDustCursor() {
   
   // Bind events that are needed
   function bindEvents() {
-    Q(document).addEventListener('mousemove', onMouseMove);
-    Q(document).addEventListener('touchmove', onTouchMove);
-    Q(document).addEventListener('touchstart', onTouchMove);
+    Q(document).on('mousemove', onMouseMove);
+    Q(document).on('touchmove', onTouchMove);
+    Q(document).on('touchstart', onTouchMove);
     
-    window.addEventListener('resize', onWindowResize);
+    Q(window).on('resize', onWindowResize);
   }
   
   function onWindowResize(e) {
