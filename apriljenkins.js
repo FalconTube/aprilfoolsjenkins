@@ -320,8 +320,8 @@ function fairyDustCursor() {
       this.position = {x: x - 10, y: y - 20};
       this.initialStyles.color = color;
 
-      this.element = Q('span');
-      this.element.innerHTML = this.character;
+      this.element = Q('<div>*</div>');
+      // this.element.innerHTML = this.character;
       this.element.css(this.initialStyles)
       // applyProperties(this.element, this.initialStyles);
       this.update();
@@ -339,7 +339,7 @@ function fairyDustCursor() {
     
     this.die = function() {
       // this.element.parentNode.removeChild(this.element);
-      this.element.parentNode.remove(this.element);
+      this.element.parent().remove(this.element);
     }
     
   }
