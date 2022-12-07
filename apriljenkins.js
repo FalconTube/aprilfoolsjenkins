@@ -322,7 +322,8 @@ function fairyDustCursor() {
 
       this.element = Q('span');
       this.element.innerHTML = this.character;
-      applyProperties(this.element, this.initialStyles);
+      this.element.css(this.initialStyles)
+      // applyProperties(this.element, this.initialStyles);
       this.update();
       
       Q('.container').append(this.element);
@@ -348,11 +349,11 @@ function fairyDustCursor() {
    */
   
   // Applies css `properties` to an element.
-  function applyProperties( target, properties ) {
-    for( var key in properties ) {
-      target.style[ key ] = properties[ key ];
-    }
-  }
+  // function applyProperties( target, properties ) {
+  //   for( var key in properties ) {
+  //     target.style[ key ] = properties[ key ];
+  //   }
+  // }
   
   init();
 };
