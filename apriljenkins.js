@@ -339,7 +339,7 @@ function fairyDustCursor() {
     
     this.die = function() {
       // this.element.parentNode.removeChild(this.element);
-      this.element.parent().remove(this.element);
+      //this.element.parent().remove(this.element);
     }
     
   }
